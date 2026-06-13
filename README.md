@@ -1,0 +1,1 @@
+# wallzy-privacy-policy
