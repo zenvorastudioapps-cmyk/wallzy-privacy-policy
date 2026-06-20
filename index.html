@@ -1,541 +1,245 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wallzy Privacy Policy</title>
-
-  <style>
-    :root {
-      --bg: #09090B;
-      --surface: #18181B;
-      --surface-2: #27272A;
-      --text: #FAFAFA;
-      --muted: #A1A1AA;
-      --muted-2: #D4D4D8;
-      --border: rgba(255,255,255,0.08);
-      --gradient: linear-gradient(135deg, #FE9414, #F21249);
-      --accent: #FE9414;
-      --danger: #F21249;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background:
-        radial-gradient(circle at top left, rgba(254,148,20,0.12), transparent 32%),
-        radial-gradient(circle at top right, rgba(242,18,73,0.10), transparent 30%),
-        var(--bg);
-      color: var(--text);
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      line-height: 1.7;
-      padding: 40px 20px;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-
-    .container {
-      max-width: 920px;
-      margin: 0 auto;
-    }
-
-    .hero {
-      margin-bottom: 40px;
-      padding: 32px;
-      border-radius: 28px;
-      background: rgba(255,255,255,0.035);
-      border: 1px solid var(--border);
-      backdrop-filter: blur(14px);
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      font-size: 44px;
-      line-height: 1.08;
-      font-weight: 850;
-      letter-spacing: -0.04em;
-      margin-bottom: 18px;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .subtitle {
-      color: var(--muted-2);
-      max-width: 720px;
-      font-size: 17px;
-    }
-
-    .meta {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 24px;
-    }
-
-    .meta-item {
-      background: rgba(255,255,255,0.035);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 14px 16px;
-    }
-
-    .meta-label {
-      display: block;
-      color: var(--muted);
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 4px;
-    }
-
-    .meta-value {
-      color: var(--text);
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .toc {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 24px;
-      margin-bottom: 18px;
-    }
-
-    .toc h2 {
-      margin-bottom: 12px;
-    }
-
-    .toc-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px 16px;
-      margin-top: 12px;
-    }
-
-    .toc a {
-      color: var(--muted-2);
-      font-size: 14px;
-    }
-
-    .card {
-      background: rgba(24,24,27,0.92);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 28px;
-      margin-bottom: 18px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.18);
-    }
-
-    h2 {
-      font-size: 22px;
-      line-height: 1.25;
-      margin-bottom: 14px;
-      font-weight: 750;
-      letter-spacing: -0.02em;
-    }
-
-    h3 {
-      font-size: 17px;
-      margin-top: 20px;
-      margin-bottom: 8px;
-      color: var(--text);
-    }
-
-    p {
-      color: var(--muted);
-      font-size: 15px;
-      margin-bottom: 12px;
-    }
-
-    ul {
-      margin-top: 12px;
-      padding-left: 20px;
-    }
-
-    li {
-      color: var(--muted);
-      margin-bottom: 10px;
-      font-size: 15px;
-    }
-
-    strong {
-      color: var(--muted-2);
-      font-weight: 700;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      word-break: break-word;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .notice {
-      border-left: 3px solid var(--accent);
-      background: rgba(254,148,20,0.08);
-      padding: 14px 16px;
-      border-radius: 14px;
-      margin-top: 14px;
-    }
-
-    .notice p {
-      margin: 0;
-      color: var(--muted-2);
-    }
-
-    .footer {
-      margin-top: 40px;
-      text-align: center;
-      color: rgba(255,255,255,0.38);
-      font-size: 13px;
-    }
-
-    @media (max-width: 720px) {
-      body {
-        padding: 24px 14px;
-      }
-
-      .hero {
-        padding: 24px;
-        border-radius: 24px;
-      }
-
-      h1 {
-        font-size: 34px;
-      }
-
-      .subtitle {
-        font-size: 15px;
-      }
-
-      .meta {
-        grid-template-columns: 1fr;
-      }
-
-      .toc-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .card {
-        padding: 22px;
-        border-radius: 22px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <main class="container">
-
-    <section class="hero">
-      <div class="badge">Wallzy Privacy Policy</div>
-
-      <h1>Your privacy matters.</h1>
-
-      <p class="subtitle">
-        This Privacy Policy explains how Wallzy, published by Zenvora Studio, handles information when you use our wallpaper application. We aim to provide a modern wallpaper experience while respecting user privacy and keeping our data practices clear.
-      </p>
-
-      <div class="meta">
-        <div class="meta-item">
-          <span class="meta-label">App</span>
-          <span class="meta-value">Wallzy</span>
-        </div>
-
-        <div class="meta-item">
-          <span class="meta-label">Publisher</span>
-          <span class="meta-value">Zenvora Studio</span>
-        </div>
-
-        <div class="meta-item">
-          <span class="meta-label">Contact</span>
-          <span class="meta-value">
-            <a href="mailto:zenvorastudioapps@gmail.com">zenvorastudioapps@gmail.com</a>
-          </span>
-        </div>
-
-        <div class="meta-item">
-          <span class="meta-label">Effective Date</span>
-          <span class="meta-value">May 15, 2026</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="toc">
-      <h2>Contents</h2>
-      <div class="toc-grid">
-        <a href="#overview">1. Overview</a>
-        <a href="#information-we-collect">2. Information We Collect</a>
-        <a href="#how-we-use-information">3. How We Use Information</a>
-        <a href="#permissions">4. App Permissions</a>
-        <a href="#wallpaper-content">5. Wallpaper Content</a>
-        <a href="#local-storage">6. Local Storage and Cache</a>
-        <a href="#third-party-services">7. Third-Party Services</a>
-        <a href="#data-sharing">8. Data Sharing</a>
-        <a href="#data-retention">9. Data Retention and Deletion</a>
-        <a href="#security">10. Data Security</a>
-        <a href="#children">11. Children’s Privacy</a>
-        <a href="#international-users">12. International Users</a>
-        <a href="#changes">13. Changes to This Policy</a>
-        <a href="#contact">14. Contact Us</a>
-      </div>
-    </section>
-
-    <section class="card" id="overview">
-      <h2>1. Overview</h2>
-      <p>
-        Wallzy is a wallpaper application that allows users to browse, preview, save, favorite, download, and apply static and live wallpapers. The app may use internet connectivity to load wallpaper images, thumbnails, videos, configuration data, and related content.
-      </p>
-      <p>
-        We do not require users to create an account to use Wallzy. We do not ask users to provide their name, phone number, address, payment information, or account credentials inside the app.
-      </p>
-      <div class="notice">
-        <p>
-          The information disclosed in this Privacy Policy should match the information declared in Google Play Console’s Data Safety section for Wallzy.
-        </p>
-      </div>
-    </section>
-
-    <section class="card" id="information-we-collect">
-      <h2>2. Information We Collect</h2>
-
-      <h3>Information you provide directly</h3>
-      <p>
-        Wallzy does not require users to submit personal information directly inside the app. If you contact us by email, we may receive your email address and any information you choose to include in your message.
-      </p>
-
-      <h3>Information stored locally on your device</h3>
-      <p>
-        Wallzy may store certain information locally on your device to provide app features and improve performance. This may include:
-      </p>
-      <ul>
-        <li>Favorite wallpapers selected by the user.</li>
-        <li>Recently viewed or cached wallpaper data.</li>
-        <li>Search history or recent searches, if this feature is enabled in the app.</li>
-        <li>App preferences and settings.</li>
-        <li>Cached thumbnails, images, videos, or temporary media files.</li>
-      </ul>
-
-      <h3>Technical and usage-related information</h3>
-      <p>
-        Depending on the app version, configuration, and third-party services used, limited technical information may be processed by service providers. This may include:
-      </p>
-      <ul>
-        <li>Device type and operating system version.</li>
-        <li>App version and basic app configuration data.</li>
-        <li>Crash, diagnostic, or performance information if crash reporting or analytics services are enabled.</li>
-        <li>Network-related information required to load remote wallpaper content.</li>
-      </ul>
-
-      <p>
-        Wallzy does not intentionally collect sensitive personal information such as government identification numbers, financial information, health information, contacts, SMS, call logs, precise location, microphone recordings, or camera images.
-      </p>
-    </section>
-
-    <section class="card" id="how-we-use-information">
-      <h2>3. How We Use Information</h2>
-      <p>
-        Information handled by Wallzy is used for the following purposes:
-      </p>
-      <ul>
-        <li>To display wallpapers, thumbnails, categories, and live wallpaper previews.</li>
-        <li>To allow users to save favorites and app preferences.</li>
-        <li>To improve loading speed through local caching.</li>
-        <li>To download or apply wallpapers when requested by the user.</li>
-        <li>To configure app content or behavior through remote configuration, if used.</li>
-        <li>To maintain app stability, security, and performance.</li>
-        <li>To respond to user support requests sent by email.</li>
-      </ul>
-    </section>
-
-    <section class="card" id="permissions">
-      <h2>4. App Permissions</h2>
-      <p>
-        Wallzy may request certain Android permissions depending on your device version and the features you use.
-      </p>
-
-      <ul>
-        <li>
-          <strong>Internet access:</strong> Used to load wallpapers, thumbnails, live wallpaper media, configuration data, and related online content.
-        </li>
-        <li>
-          <strong>Storage or media access:</strong> May be used on supported Android versions when saving or downloading wallpapers to your device.
-        </li>
-        <li>
-          <strong>Set wallpaper access:</strong> Used when you choose to apply a wallpaper through the app.
-        </li>
-        <li>
-          <strong>Notifications:</strong> If used in a future or current app version, notifications may be requested only for app-related updates or user-facing features.
-        </li>
-      </ul>
-
-      <p>
-        Permission availability and wording may vary depending on Android version, device manufacturer, and app version. You can manage app permissions at any time through your device settings.
-      </p>
-    </section>
-
-    <section class="card" id="wallpaper-content">
-      <h2>5. Wallpaper Content</h2>
-      <p>
-        Wallzy loads wallpapers, thumbnails, live wallpaper videos, and related media from remote sources or content servers. Internet access is required to browse, preview, and download online wallpaper content.
-      </p>
-      <p>
-        Some wallpaper content may be cached temporarily on your device to improve performance and reduce repeated loading.
-      </p>
-    </section>
-
-    <section class="card" id="local-storage">
-      <h2>6. Local Storage and Cache</h2>
-      <p>
-        Wallzy may store app data locally on your device. Local data may include favorites, settings, cached thumbnails, cached wallpaper media, and search-related data if supported by the app.
-      </p>
-      <p>
-        Local data is generally stored on your device and is used to improve app performance and user experience. You can remove locally stored data by clearing the app’s storage/cache from your device settings or uninstalling the app.
-      </p>
-    </section>
-
-    <section class="card" id="third-party-services">
-      <h2>7. Third-Party Services</h2>
-      <p>
-        Wallzy may use trusted third-party services, SDKs, or platform services to operate and improve the app. These services may process limited technical information according to their own privacy policies.
-      </p>
-
-      <p>Third-party services may include, depending on the app version:</p>
-      <ul>
-        <li>Google Play Services</li>
-        <li>Firebase Remote Config</li>
-        <li>Firebase or Google services used for app configuration, diagnostics, or performance, if enabled</li>
-        <li>Remote storage, hosting, or content delivery services used to provide wallpaper media</li>
-      </ul>
-
-      <p>
-        Third-party providers may collect technical data such as device information, app version, crash logs, diagnostics, identifiers, or network information when required to provide their services. Their handling of information is governed by their own privacy policies and terms.
-      </p>
-    </section>
-
-    <section class="card" id="data-sharing">
-      <h2>8. Data Sharing</h2>
-      <p>
-        Zenvora Studio does not sell users’ personal information.
-      </p>
-      <p>
-        We may share or allow processing of limited information only in the following cases:
-      </p>
-      <ul>
-        <li>With service providers that help operate app features, remote configuration, hosting, content delivery, diagnostics, or app performance.</li>
-        <li>When required to comply with applicable laws, regulations, legal processes, or enforceable governmental requests.</li>
-        <li>To protect the rights, safety, security, or integrity of users, the app, Zenvora Studio, or others.</li>
-      </ul>
-      <p>
-        Any data sharing or processing by third-party SDKs used in Wallzy should also be accurately reflected in the app’s Google Play Data Safety section.
-      </p>
-    </section>
-
-    <section class="card" id="data-retention">
-      <h2>9. Data Retention and Deletion</h2>
-
-      <h3>Local app data</h3>
-      <p>
-        Locally stored app data, such as favorites, settings, cached files, and search history if enabled, remains on your device until it is deleted by you, cleared by the app, removed through device settings, or removed when the app is uninstalled.
-      </p>
-
-      <h3>Support emails</h3>
-      <p>
-        If you contact us by email, we may retain your message and email address for as long as reasonably necessary to respond to your request, maintain support records, resolve disputes, or comply with legal obligations.
-      </p>
-
-      <h3>Deletion requests</h3>
-      <p>
-        Wallzy does not currently require user account creation. If you want to request deletion of information you have provided to us by email, or if you have questions about local app data, contact us at:
-        <a href="mailto:zenvorastudioapps@gmail.com">zenvorastudioapps@gmail.com</a>.
-      </p>
-
-      <p>
-        You can also delete local app data directly from your device by clearing Wallzy’s app storage/cache or uninstalling the app.
-      </p>
-    </section>
-
-    <section class="card" id="security">
-      <h2>10. Data Security</h2>
-      <p>
-        We use reasonable technical and organizational measures to help protect information handled by Wallzy. However, no method of electronic transmission or storage is completely secure, and we cannot guarantee absolute security.
-      </p>
-      <p>
-        Users should download Wallzy only from trusted app stores and keep their device operating system updated for better security.
-      </p>
-    </section>
-
-    <section class="card" id="children">
-      <h2>11. Children’s Privacy</h2>
-      <p>
-        Wallzy is intended for a general audience and is not designed to knowingly collect personal information from children. We do not knowingly request personal information from children.
-      </p>
-      <p>
-        If you believe that a child has provided personal information to us, please contact us at
-        <a href="mailto:zenvorastudioapps@gmail.com">zenvorastudioapps@gmail.com</a>
-        so we can review and take appropriate action.
-      </p>
-    </section>
-
-    <section class="card" id="international-users">
-      <h2>12. International Users</h2>
-      <p>
-        Wallzy may be used by users in different countries. Depending on your location, privacy rights and data protection laws may vary. By using Wallzy, you understand that information may be processed in accordance with this Privacy Policy and applicable law.
-      </p>
-    </section>
-
-    <section class="card" id="changes">
-      <h2>13. Changes to This Privacy Policy</h2>
-      <p>
-        We may update this Privacy Policy from time to time to reflect changes in the app, legal requirements, third-party services, or our privacy practices.
-      </p>
-      <p>
-        When we update this Privacy Policy, we will revise the effective date at the top of this page. Continued use of Wallzy after changes are posted means you acknowledge the updated Privacy Policy.
-      </p>
-    </section>
-
-    <section class="card" id="contact">
-      <h2>14. Contact Us</h2>
-      <p>
-        If you have questions, requests, or concerns about this Privacy Policy or Wallzy’s privacy practices, contact the publisher:
-      </p>
-
-      <ul>
-        <li><strong>Publisher:</strong> Zenvora Studio</li>
-        <li><strong>Email:</strong> <a href="mailto:zenvorastudioapps@gmail.com">zenvorastudioapps@gmail.com</a></li>
-        <li><strong>App:</strong> Wallzy</li>
-      </ul>
-    </section>
-
-    <footer class="footer">
-      Wallzy © 2026 Zenvora Studio. All rights reserved.
-    </footer>
-
-  </main>
-</body>
-</html>
+<section class="card" id="overview">
+  <h2>1. Overview</h2>
+  <p>
+    This Privacy Policy explains how our mobile applications handle information when you use them. We are committed to protecting user privacy and maintaining transparency regarding how information is processed.
+  </p>
+  <p>
+    Our applications may provide content, personalization features, media downloads, customization options, and other functionality depending on the specific app.
+  </p>
+  <p>
+    We do not require users to create an account unless explicitly stated within a specific application.
+  </p>
+</section>
+
+<section class="card" id="information-we-collect">
+  <h2>2. Information We Collect</h2>
+
+  <h3>Information you provide directly</h3>
+  <p>
+    Most of our applications do not require users to submit personal information. If you contact us by email, we may receive your email address and any information you choose to include in your message.
+  </p>
+
+  <h3>Information stored locally on your device</h3>
+  <p>
+    Applications may store certain information locally on your device to improve functionality and user experience.
+  </p>
+
+  <ul>
+    <li>App settings and preferences.</li>
+    <li>Favorites, bookmarks, or saved content.</li>
+    <li>Recently viewed content.</li>
+    <li>Cached media and temporary files.</li>
+    <li>Search history, if supported by the application.</li>
+  </ul>
+
+  <h3>Technical and usage information</h3>
+  <p>
+    Depending on the application and enabled services, certain technical information may be processed.
+  </p>
+
+  <ul>
+    <li>Device model and operating system version.</li>
+    <li>Application version.</li>
+    <li>Crash and diagnostic information.</li>
+    <li>Performance-related information.</li>
+    <li>Network-related information required for application functionality.</li>
+  </ul>
+
+  <p>
+    We do not intentionally collect sensitive personal information such as government identification numbers, financial information, health information, contacts, call logs, SMS messages, microphone recordings, camera recordings, or precise location unless explicitly required by a feature and disclosed separately.
+  </p>
+</section>
+
+<section class="card" id="how-we-use-information">
+  <h2>3. How We Use Information</h2>
+
+  <p>
+    Information processed by our applications may be used for the following purposes:
+  </p>
+
+  <ul>
+    <li>To provide application features and services.</li>
+    <li>To save preferences and settings.</li>
+    <li>To improve performance and reliability.</li>
+    <li>To deliver content requested by users.</li>
+    <li>To improve application quality and stability.</li>
+    <li>To respond to support requests.</li>
+    <li>To maintain security and prevent misuse.</li>
+  </ul>
+</section>
+
+<section class="card" id="permissions">
+  <h2>4. App Permissions</h2>
+
+  <p>
+    Depending on the features used, our applications may request certain permissions.
+  </p>
+
+  <ul>
+    <li>
+      <strong>Internet Access:</strong> Used to load online content and enable application features.
+    </li>
+
+```
+<li>
+  <strong>Storage or Media Access:</strong> Used when saving, downloading, or managing content on your device.
+</li>
+
+<li>
+  <strong>Notifications:</strong> Used to deliver application updates and user-facing notifications when enabled.
+</li>
+
+<li>
+  <strong>Feature-Specific Permissions:</strong> Certain applications may request additional permissions required for their functionality.
+</li>
+```
+
+  </ul>
+
+  <p>
+    Users can manage permissions at any time through their device settings.
+  </p>
+</section>
+
+<section class="card" id="content-services">
+  <h2>5. Content and Online Services</h2>
+
+  <p>
+    Some applications may load content, media, configuration data, or other resources from online services. Internet connectivity may be required for certain features to function properly.
+  </p>
+
+  <p>
+    To improve performance, content may be temporarily cached on your device.
+  </p>
+</section>
+
+<section class="card" id="local-storage">
+  <h2>6. Local Storage and Cache</h2>
+
+  <p>
+    Applications may store local data such as settings, preferences, cached content, favorites, bookmarks, and temporary files to improve performance and user experience.
+  </p>
+
+  <p>
+    You can remove locally stored information by clearing application storage/cache through your device settings or uninstalling the application.
+  </p>
+</section>
+
+<section class="card" id="third-party-services">
+  <h2>7. Third-Party Services</h2>
+
+  <p>
+    Our applications may use trusted third-party services and SDKs to provide functionality, diagnostics, analytics, notifications, hosting, content delivery, or performance monitoring.
+  </p>
+
+  <p>
+    Depending on the application version, services may include:
+  </p>
+
+  <ul>
+    <li>Google Play Services</li>
+    <li>Firebase Services</li>
+    <li>Analytics Services</li>
+    <li>Crash Reporting Services</li>
+    <li>Content Delivery or Hosting Providers</li>
+    <li>Advertising Providers (where applicable)</li>
+  </ul>
+
+  <p>
+    Third-party providers may process limited technical information according to their own privacy policies.
+  </p>
+</section>
+
+<section class="card" id="data-sharing">
+  <h2>8. Data Sharing</h2>
+
+  <p>
+    We do not sell personal information.
+  </p>
+
+  <p>
+    Information may be shared only:
+  </p>
+
+  <ul>
+    <li>With service providers necessary to operate application features.</li>
+    <li>To comply with legal obligations.</li>
+    <li>To protect the security, rights, and safety of users and services.</li>
+  </ul>
+</section>
+
+<section class="card" id="data-retention">
+  <h2>9. Data Retention and Deletion</h2>
+
+  <h3>Local Application Data</h3>
+
+  <p>
+    Information stored locally on your device remains available until removed by you, cleared through device settings, or deleted when the application is uninstalled.
+  </p>
+
+  <h3>Support Communications</h3>
+
+  <p>
+    If you contact us by email, we may retain your message and email address for as long as reasonably necessary to respond to your request or comply with legal obligations.
+  </p>
+
+  <h3>Deletion Requests</h3>
+
+  <p>
+    If you have questions regarding information you have shared with us, contact:
+    <a href="mailto:zenvorastudioapps@gmail.com">zenvorastudioapps@gmail.com</a>
+  </p>
+</section>
+
+<section class="card" id="security">
+  <h2>10. Data Security</h2>
+
+  <p>
+    We use reasonable technical and organizational measures to help protect information. However, no method of electronic transmission or storage can be guaranteed to be completely secure.
+  </p>
+</section>
+
+<section class="card" id="children">
+  <h2>11. Children's Privacy</h2>
+
+  <p>
+    Our applications are intended for a general audience and are not designed to knowingly collect personal information from children.
+  </p>
+
+  <p>
+    If you believe a child has provided personal information, please contact us at:
+    <a href="mailto:zenvorastudioapps@gmail.com">zenvorastudioapps@gmail.com</a>
+  </p>
+</section>
+
+<section class="card" id="international-users">
+  <h2>12. International Users</h2>
+
+  <p>
+    Our applications may be used worldwide. Information may be processed in accordance with this Privacy Policy and applicable laws.
+  </p>
+</section>
+
+<section class="card" id="changes">
+  <h2>13. Changes to This Privacy Policy</h2>
+
+  <p>
+    We may update this Privacy Policy from time to time to reflect changes in our applications, legal requirements, or services used.
+  </p>
+
+  <p>
+    Updated versions will be published with a revised effective date.
+  </p>
+</section>
+
+<section class="card" id="contact">
+  <h2>14. Contact Us</h2>
+
+  <p>
+    If you have questions, requests, or concerns regarding this Privacy Policy, please contact us:
+  </p>
+
+  <ul>
+    <li><strong>Email:</strong> <a href="mailto:zenvorastudioapps@gmail.com">zenvorastudioapps@gmail.com</a></li>
+  </ul>
+</section>
